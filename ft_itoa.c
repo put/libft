@@ -1,23 +1,22 @@
 /* ************************************************************************** */
-/*																			*/
-/*														:::	  ::::::::   */
-/*   ft_itoa.c										  :+:	  :+:	:+:   */
-/*													+:+ +:+		 +:+	 */
-/*   By: mschippe <mschippe@student.42.fr>		  +#+  +:+	   +#+		*/
-/*												+#+#+#+#+#+   +#+		   */
-/*   Created: 2024/10/16 21:24:19 by mschippe		  #+#	#+#			 */
-/*   Updated: 2024/10/23 13:22:23 by mschippe		 ###   ########.fr	   */
-/*																			*/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mschippe <mschippe@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/06 01:55:15 by mschippe          #+#    #+#             */
+/*   Updated: 2025/02/06 01:56:48 by mschippe         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <limits.h>
 
 char	*ft_itoa(int n)
 {
-	size_t	intlen;
-	char	*res;
-	long	num;
+	long long	intlen;
+	char		*res;
+	long		num;
 
 	intlen = 2 + (n < 0);
 	num = (long)n;

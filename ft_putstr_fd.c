@@ -1,20 +1,23 @@
 /* ************************************************************************** */
-/*																			*/
-/*														:::	  ::::::::   */
-/*   ft_putstr_fd.c									 :+:	  :+:	:+:   */
-/*													+:+ +:+		 +:+	 */
-/*   By: mschippe <mschippe@student.42.fr>		  +#+  +:+	   +#+		*/
-/*												+#+#+#+#+#+   +#+		   */
-/*   Created: 2024/10/17 14:31:17 by mschippe		  #+#	#+#			 */
-/*   Updated: 2024/10/18 15:37:15 by mschippe		 ###   ########.fr	   */
-/*																			*/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mschippe <mschippe@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/06 02:01:47 by mschippe          #+#    #+#             */
+/*   Updated: 2025/02/06 02:01:54 by mschippe         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-		ft_putchar_fd(*s++, fd);
+	int	count;
+
+	count = 0;
+	while (s[count])
+		count++;
+	write(fd, s, count);
 }
