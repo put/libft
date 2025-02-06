@@ -10,8 +10,9 @@
 /*																			*/
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#define LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
 
 typedef struct s_list
 {
@@ -64,3 +65,4 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_printf(const char *s, ...);
 char	*get_next_line(int fd);
+#endif

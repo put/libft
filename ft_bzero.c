@@ -6,11 +6,11 @@
 /*   By: mschippe <mschippe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:43:39 by mschippe          #+#    #+#             */
-/*   Updated: 2024/10/24 16:43:42 by mschippe         ###   ########.fr       */
+/*   Updated: 2025/02/06 02:05:25 by mschippe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <aio.h>
+#include <stdlib.h>
 
 void	ft_bzero(void *s, size_t n)
 {
