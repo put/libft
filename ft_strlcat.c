@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mschippe <mschippe@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 02:11:41 by mschippe          #+#    #+#             */
-/*   Updated: 2025/02/06 02:11:45 by mschippe         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_strlcat.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: mschippe <mschippe@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2025/02/06 02:11:41 by mschippe      #+#    #+#                 */
+/*   Updated: 2025/03/07 01:02:55 by Mika Schipp   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	srcsize = 0;
 	available_space = 0;
 	count = 0;
+	if (!dst || !src)
+		return (0);
 	while (dst[dstsize] && dstsize < size)
 		dstsize++;
 	while (src[srcsize])

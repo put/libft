@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mschippe <mschippe@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 02:11:51 by mschippe          #+#    #+#             */
-/*   Updated: 2025/02/06 02:11:53 by mschippe         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_strlcpy.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: mschippe <mschippe@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2025/02/06 02:11:51 by mschippe      #+#    #+#                 */
+/*   Updated: 2025/03/07 01:03:09 by Mika Schipp   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	srcsize = 0;
 	ctr = 0;
+	if (!dst || !src)
+		return (0);
 	while (src[srcsize])
 		srcsize++;
 	if (size > 0)
